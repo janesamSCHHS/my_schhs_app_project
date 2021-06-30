@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
       drawer: DrawerSlide(),
       appBar: AppBar(
         title: Text(
-          'My SCHHS app',
+          'My SCHHS',
           style: Theme.of(context).textTheme.headline3,
         ),
         actions: [
