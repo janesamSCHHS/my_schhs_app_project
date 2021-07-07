@@ -143,7 +143,7 @@ class AboutPage extends StatelessWidget {
               ),
             ],
           ),
-          Row(
+         /*Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Expanded(
@@ -163,7 +163,7 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
             ],
-          ),
+          ),*/
 
 
         ],),
