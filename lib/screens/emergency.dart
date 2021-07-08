@@ -86,8 +86,8 @@ class DemPage extends StatelessWidget {
                       Text(
                         'Should I go to the emergency department?',
                         style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey[500],
+                          fontSize: 17,
+                          color: Colors.grey[700],
                         ),
                       ),
                       SizedBox(height: 8),
@@ -220,12 +220,25 @@ class DemPage extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(height: 10),
                       Container(
-                          margin: EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                              '\nGoing to hospital when your sick or injured is not always the best option, find the right option: https://rightplacerighttime.com.au/ \n \nFind a GP through https://www.healthdirect.gov.au/australian-health-services or call 13 HEALTH (13 43 25 84) for free professional health advice, 24-hours a day.\n \nVisit a Minor Injury and Illness Clinic If your GP is not available, you can visit the Minor Injury and Illness Clinic at Caloundra without an appointment. Open 8.00am to 4.00pm, seven days a week. Caloundra Health Service – West Terrace',
-                              style: Theme.of(context).textTheme.bodyText1)),
-                      SizedBox(
+                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        child: InkWell(
+                          child: RichText(
+                              text: TextSpan(
+                                  text:
+                                  'Try the Minor Injury and Illness Clinic!.',
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .copyWith(fontSize: 16),
+                                  children: <TextSpan>[
+                              TextSpan(text:
+                          ('\n\nVisit the Minor Injury and Illness Clinic if your GP is not available, you can visit the MIIC at Caloundra without an appointment. \nOpen 8.00am to 4.00pm, seven days a week.\nCaloundra Health Service – West Terrace'), style: Theme.of(context).textTheme.bodyText1),
+                     ] ),
+      ),
+    ),),
+                                  SizedBox(
                         height: 20.0,
                       ),
                       Padding(

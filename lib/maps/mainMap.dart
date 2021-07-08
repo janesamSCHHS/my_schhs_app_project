@@ -60,7 +60,7 @@ class _MapsPageState extends State<MapsPage> {
         position: showLocation, //position of marker
         infoWindow: InfoWindow( //popup info
           title: 'Sunshine Coast University Hospital ',
-          snippet: 'My Custom Subtitle',
+          snippet: 'Birtinya',
         ),
         icon: BitmapDescriptor.defaultMarker, //Icon for Marker
       ));

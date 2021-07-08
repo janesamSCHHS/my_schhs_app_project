@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:schhs_my_app_v2a/maps/mainMap.dart';
 import 'package:schhs_my_app_v2a/services/ourFacilities.dart';
 import './about.dart';
@@ -26,7 +27,7 @@ class FacilitiesPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) {
-                      return AboutPage();
+                      return OurFacilities();
                     }),
                   );
                 }),
@@ -164,6 +165,8 @@ class _ImageTile extends StatelessWidget {
     required this.facilityName,
     required this.facilityDesc,
   }) ;
+
+ 
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -253,4 +256,7 @@ class _ImageTile extends StatelessWidget {
       ],
     );
   }
+}
+
+class _MapsPageState {
 }

@@ -1,8 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:schhs_my_app_v2a/screens/about.dart';
+import 'package:schhs_my_app_v2a/screens/appoints.dart';
+import 'package:schhs_my_app_v2a/screens/clinics.dart';
+import 'package:schhs_my_app_v2a/screens/contact.dart';
+import 'package:schhs_my_app_v2a/screens/facilities.dart';
+import 'package:schhs_my_app_v2a/screens/medications.dart';
+import 'package:schhs_my_app_v2a/services/ourFacilities.dart';
 import 'package:schhs_my_app_v2a/widgets/drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'community.dart';
 import 'emergency.dart';
 
 class HomePage extends StatelessWidget {
@@ -51,42 +59,35 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(0.0),
         child: SingleChildScrollView(
           child: Container(
-           // height: MediaQuery.of(context).size.width,
+            // height: MediaQuery.of(context).size.width,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(color: Colors.white),
-            child: Column(children: [
+            decoration: BoxDecoration(color: Colors.blueGrey.shade100),
+            child: Column(
+                children: [
               Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Expanded(
-                    //flex: 1,
+                  Container(
+                   // width: MediaQuery.of(context).size.width,
+                   // color: Colors.white,
                     child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      color: Colors.white,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 18.0),
-                        child: Text(
-                          'Welcome',
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                            color: Color(0xFF3ab2c2),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 26.0,
-                          ),
+                      padding: EdgeInsets.symmetric(
+                          vertical: 0, horizontal: 20.0),
+                      child: Text('Welcome',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 26.0,
                         ),
                       ),
                     ),
                   ),
-                  Container(
-                    height: 130.0,
-                    color: Colors.white,
-                    child: Image.asset(
-                      'assets/images/circles2.png',
-                      fit: BoxFit.fitHeight,
+                  Container(  child: Image.asset(
+                    'assets/images/circles2.png', fit: BoxFit.fill,
                     ),
                     alignment: Alignment.topRight,
                   ),
@@ -129,113 +130,92 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               Row(
-             mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        ElevatedButton(
-                            style: ButtonStyle(),
-                          child: Text('button1',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                              onPressed: () {
-                                  Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) {
-                                  return DemPage();
-                                         },));
-                          } ),
-                        ElevatedButton(
-                            child: Text('button2',
-                              style: TextStyle(color: Colors.black87),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) {
-                                    return DemPage();
-                                  },));
-                            } ),
-                        ElevatedButton(
-                            child: Text('button3',
-                              style: TextStyle(color: Colors.black87),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) {
-                                    return DemPage();
-                                  },));
-                            } ),
-                        ElevatedButton(
-                            child: Text('button4',
-                              style: TextStyle(color: Colors.black87),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) {
-                                    return DemPage();
-                                  },));
-                            } ),
-                      ],
-                    ),
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.expand(width: 180, height: 80),
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return AboutPage();},),);},
+                            child: Text('About', style: TextStyle(color: Color(0xFF3ab2c2), fontSize: 18),),
+                            //icon: Icon(Icons.home_outlined,),),),
+                        ),
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return ClinicsPage();},),);},
+                            child: Text('Clinics and \nday services', style: TextStyle(color: Colors.white,fontSize: 18),),
+                            //icon: Icon(Icons.airline_seat_individual_suite_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                        ),
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
+                              child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return DemPage();},),);},
+                            child: Text('Emergency', style: TextStyle(color: Color(0xFF3ab2c2),fontSize: 18),),
+                           // icon: Icon(Icons.healing_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2), ),),
+                        ),
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return MedicationsPage();},),);},
+                            child: Text('Medications', style: TextStyle(color: Colors.white,fontSize: 18),),
+                           // icon: Icon(Icons.warning_amber_rounded),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                        ),
+                      ),),
+                    ],
                   ),
                   Column(
                     children: [
-                      ElevatedButton(
-                          style: ButtonStyle(),
-                          child: Text('button1',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return DemPage();
-                                },));
-                          } ),
-                      ElevatedButton(
-                          child: Text('button2',
-                            style: TextStyle(color: Colors.black87),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return DemPage();
-                                },));
-                          } ),
-                      ElevatedButton(
-                          child: Text('button3',
-                            style: TextStyle(color: Colors.black87),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return DemPage();
-                                },));
-                          } ),
-                      ElevatedButton(
-                          child: Text('button4',
-                            style: TextStyle(color: Colors.black87),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) {
-                                  return DemPage();
-                                },));
-                          } ),
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.expand(width: 180, height: 80),
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return FacilitiesPage();},),);},
+                            child: Text('Facilities', style: TextStyle(color: Colors.white, fontSize: 18),),
+                            //icon: Icon(Icons.local_hospital_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                        ),
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4,),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return AppointPage();},),);},
+                            child: Text('Appointments\nand referrals', style: TextStyle(color: Color(0xFF3ab2c2), fontSize: 18),),
+                            //icon: Icon(Icons.calendar_today_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                        ),
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return CommunityPage();},),);},
+                            child: Text('Community', style: TextStyle(color: Colors.white, fontSize: 18),),
+                            //icon: Icon(Icons.people_outline),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2), ),),
+                        ),
+                      ),),
+                      Padding(
+                        padding: const EdgeInsets.all(3.0),
+                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4,),
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return ContactsPage();},),);},
+                            child: Text('Contact', style: TextStyle(color: Color(0xFF3ab2c2), fontSize: 18),),
+                            //icon: Icon(Icons.contact_phone_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2), ),),
+                        ),
+                      ),),
                     ],
+
                   ),
 
-
                 ],
-              ),
-
+              ),SizedBox(height: 25),
               Container(
                 decoration: BoxDecoration(
                   // borderRadius: BorderRadius.circular(10.0),
