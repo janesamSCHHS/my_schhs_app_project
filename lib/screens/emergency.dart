@@ -102,7 +102,7 @@ class DemPage extends StatelessWidget {
                             text: TextSpan(
                               text:
                                   'Going to hospital when your sick or injured is not always the best option. '
-                                  '\n\nFind a GP through: ',
+                                  '\nFind a GP: ',
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText2!
@@ -110,7 +110,7 @@ class DemPage extends StatelessWidget {
                               children: <TextSpan>[
                                 TextSpan(
                                   text:
-                                      'https://www.healthdirect.gov.au/australian-health-services',
+                                      'CLICK HERE',
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline6!
@@ -121,9 +121,9 @@ class DemPage extends StatelessWidget {
                                           'https://www.healthdirect.gov.au/australian-health-services');
                                     },
                                 ),
-                                TextSpan(text: '\nOR call'),
+                                TextSpan(text: ' OR call'),
                                 TextSpan(
-                                    text: ' 13 HEALTH (13 43 25 84)',
+                                    text: ' 13 HEALTH \n(13 43 25 84)',
                                     style: Theme.of(context)
                                         .textTheme
                                         .bodyText2!
@@ -220,25 +220,30 @@ class DemPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10),
+                      Divider(thickness: 2, color: Colors.red,),
+                      SizedBox(height: 20),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 20),
                         child: InkWell(
                           child: RichText(
-                              text: TextSpan(
-                                  text:
-                                  'Try the Minor Injury and Illness Clinic!.',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText1!
-                                      .copyWith(fontSize: 16),
-                                  children: <TextSpan>[
-                              TextSpan(text:
-                          ('\n\nVisit the Minor Injury and Illness Clinic if your GP is not available, you can visit the MIIC at Caloundra without an appointment. \nOpen 8.00am to 4.00pm, seven days a week.\nCaloundra Health Service – West Terrace'), style: Theme.of(context).textTheme.bodyText1),
-                     ] ),
-      ),
-    ),),
-                                  SizedBox(
+                            text: TextSpan(
+                                text: 'Minor Injury and Illness Clinic (MIIC)!',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .copyWith(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.red),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text:
+                                          ('\n\nVisit the Minor Injury and Illness Clinic if your GP is not available, you can visit the MIIC at Caloundra without an appointment. \nOpen 8.00am to 4.00pm, seven days a week.\nCaloundra Health Service – West Terrace'),
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .bodyText1),
+                                ]),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
                         height: 20.0,
                       ),
                       Padding(
@@ -250,17 +255,18 @@ class DemPage extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
+                      Divider(thickness: 2, color: Colors.red,),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 20),
                         child: InkWell(
                           child: RichText(
                             text: TextSpan(
                               text:
-                                  'Patient Journey through an emergency department Video:',
-                              style:Theme.of(context).textTheme.bodyText1,
+                                  'Patient Journey through an emergency department \nTo watch video:  ',
+                              style: Theme.of(context).textTheme.bodyText1,
                               children: <TextSpan>[
                                 TextSpan(
-                                    text: 'https://vimeo.com/193804106\n\n',
+                                    text: 'CLICK HERE\n\n',
                                     style:
                                         Theme.of(context).textTheme.headline6,
                                     recognizer: TapGestureRecognizer()
@@ -269,11 +275,11 @@ class DemPage extends StatelessWidget {
                                       }),
                                 TextSpan(
                                   text:
-                                      'Coronavirus (Covid-19)\nFor information about testing, vaccinations or patient resources visit:',
+                                      'Coronavirus (Covid-19)\nFor information about testing, vaccinations or patient resources ',
                                   children: <TextSpan>[
                                     TextSpan(
                                         text:
-                                            ' https://www.health.qld.gov.au/sunshinecoast/covid-19',
+                                            ' CLICK HERE',
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline6,
@@ -284,17 +290,22 @@ class DemPage extends StatelessWidget {
                                           }),
                                     TextSpan(
                                       text: '  or phone 134 COVID (13 42 68).',
-                                      style: TextStyle(fontFamily: 'Meta', fontSize: 13.0, color: Colors.black,
+                                      style: TextStyle(
+                                        fontFamily: 'Meta',
+                                        fontSize: 13.0,
+                                        color: Colors.black,
                                       ),
                                     ),
-
                                   ],
                                 ),
                               ],
                             ),
                           ),
                         ),
-                      ),SizedBox(height: 20,),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
                     ],
                   ),
                 ),
@@ -306,29 +317,3 @@ class DemPage extends StatelessWidget {
     );
   }
 }
-/*child: InkWell(
-                          child: RichText(
-                            text: TextSpan(
-                                text:
-                                'Sunshine Coast Hospital and Health Service (SCHHS) is the major provider of public health services, health education and research across the Sunshine Coast, Gympie and Noosa local government areas.\n \nWhile Sunshine Coast University Hospital is the region’s centre for acute, critical and specialised care, all our facilities play unique and complementary roles including Nambour General Hospital, Caloundra Health Service, Gympie Hospital, Maleny Soldiers Memorial Hospital, Glenbrook Residential Aged Care Facility, Maroochydore Community Hub, Janelle Killick Community Care Unit and other community health services.\n \nWe work in partnership with ',
-                                style:
-                                Theme.of(context).textTheme.bodyText1,
-                                children: <TextSpan>[
-                                  TextSpan(
-                                      text:
-                                      'Central Queensland, Wide Bay, Sunshine Coast PHN',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headline6,
-                                      recognizer: TapGestureRecognizer()..onTap = () {
-                                          launch(
-                                              'https://www.ourphn.org.au/');
-                                        }),
-                                  TextSpan(
-                                    text:
-                                    ' the regions primary health provider.',
-                                    style: Theme.of(context).textTheme.bodyText1,
-                                  )
-                                ]),
-                          ),
-                        )*/

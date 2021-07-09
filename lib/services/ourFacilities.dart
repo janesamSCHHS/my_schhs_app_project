@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:schhs_my_app_v2a/screens/home.dart';
 
 class OurFacilities extends StatefulWidget {
-
   @override
   _OurFacilitiesState createState() => _OurFacilitiesState();
 }
@@ -16,31 +15,29 @@ class _OurFacilitiesState extends State<OurFacilities> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF3ab2c2),
-    title: Text("Facility information"),
-    actions: [
-    Padding(
-    padding: EdgeInsets.all(8.0),
-    child: IconButton(
-    icon: Icon(
-    Icons.home,
-    size: 26.0,
-    ),
-    onPressed: () {
-    Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) {
-    return HomePage();
-    }),
-    );
-    }),
-    ),
-    ],),
+        title: Text("Facility information"),
+        actions: [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: IconButton(
+                icon: Icon(
+                  Icons.home,
+                  size: 26.0,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return HomePage();
+                    }),
+                  );
+                }),
+          ),
+        ],
+      ),
       body: Padding(
         child: Column(
-          children: <Widget>[
-            _stackedContainers(),
-            _navigationButtons()
-          ],
+          children: <Widget>[_stackedContainers(), _navigationButtons()],
         ),
         padding: EdgeInsets.all(5.0),
       ),
@@ -64,14 +61,14 @@ class _OurFacilitiesState extends State<OurFacilities> {
           ),
           Container(
               child: Center(
-                  child: Image.asset("assets/images/ngh.jpg",)
-              )
-          ),
+                  child: Image.asset(
+            "assets/images/ngh.jpg",
+          ))),
           Container(
               child: Center(
-                  child: Image.asset("assets/images/scuh.jpg",)
-              )
-          ),
+                  child: Image.asset(
+            "assets/images/scuh.jpg",
+          ))),
         ],
       ),
     );
@@ -81,30 +78,33 @@ class _OurFacilitiesState extends State<OurFacilities> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
-        FlatButton(
-          color: Color(0xFF3ab2c2),
+        TextButton(
           child: Text(
-            'Information', style: TextStyle(fontSize: 16.0, color: Colors.white),),
+            'Information',
+            style: TextStyle(fontSize: 16.0, color: Colors.black87),
+          ),
           onPressed: () {
             setState(() {
               index = 0;
             });
           },
         ),
-        FlatButton(
-          color: Color(0xFF3ab2c2),
+        TextButton(
           child: Text(
-            'Nambour', style: TextStyle(fontSize: 16.0, color: Colors.white),),
+            'Nambour',
+            style: TextStyle(fontSize: 16.0, color: Colors.black87),
+          ),
           onPressed: () {
             setState(() {
               index = 1;
             });
           },
         ),
-        FlatButton(
-          color: Color(0xFF3ab2c2),
-          child: Text('SCUH',
-            style: TextStyle(fontSize: 16.0, color: Colors.white),),
+        TextButton(
+          child: Text(
+            'SCUH',
+            style: TextStyle(fontSize: 16.0, color: Colors.black87),
+          ),
           onPressed: () {
             setState(() {
               index = 2;
@@ -141,7 +141,6 @@ class _OurFacilitiesState extends State<OurFacilities> {
           ),
         ],
       ),*/
-
 
 /*Stack(
           clipBehavior: Clip.none, alignment: Alignment.topCenter,

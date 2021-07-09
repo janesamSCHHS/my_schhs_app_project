@@ -10,6 +10,8 @@ import 'package:schhs_my_app_v2a/screens/emergency.dart';
 import 'package:schhs_my_app_v2a/screens/facilities.dart';
 import 'package:schhs_my_app_v2a/screens/home.dart';
 import '../med_list_screen.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 class DrawerSlide extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 10);
@@ -46,7 +48,7 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading: Icon(Icons.home_outlined, color: Colors.black87),
+                leading: Icon(FontAwesomeIcons.info, color: Colors.grey.shade800,size: 20,),
                 title: Text("About SCHHS",
                     style: Theme
                         .of(context)
@@ -68,7 +70,7 @@ class DrawerSlide extends StatelessWidget {
                   );
                 },
                 leading:
-                Icon(Icons.local_hospital_outlined, color: Colors.black87),
+                Icon(FontAwesomeIcons.hospital, color: Colors.grey.shade800,size: 20,),
                 title: Text("Our facilities",
                     style: Theme
                         .of(context)
@@ -88,8 +90,8 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading: Icon(Icons.airline_seat_individual_suite_outlined,
-                    color: Colors.black87),
+                leading: Icon(FontAwesomeIcons.wheelchair,
+                  color: Colors.grey.shade800,size: 20,),
                 title: Text("Clinics and day services",
                     style: Theme
                         .of(context)
@@ -110,7 +112,7 @@ class DrawerSlide extends StatelessWidget {
                   );
                 },
                 leading:
-                Icon(Icons.calendar_today_outlined, color: Colors.black87),
+                Icon(FontAwesomeIcons.calendarDay, color: Colors.grey.shade800,size: 20,),
                 title: Text("Appointments and referrals",
                     style: Theme
                         .of(context)
@@ -130,7 +132,7 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading: Icon(Icons.healing_outlined, color: Colors.black87),
+                leading: Icon(FontAwesomeIcons.hospitalUser, color: Colors.grey.shade800,size: 20,),
                 title: Text("Emergency department",
                     style: Theme
                         .of(context)
@@ -151,7 +153,7 @@ class DrawerSlide extends StatelessWidget {
                   );
                 },
                 leading:
-                Icon(Icons.people_outline_rounded, color: Colors.black87),
+                Icon(FontAwesomeIcons.utensils, color: Colors.grey.shade800,size: 20,),
                 title: Text("Our community",
                     style: Theme
                         .of(context)
@@ -173,7 +175,7 @@ class DrawerSlide extends StatelessWidget {
                   );
                 },
                 leading:
-                Icon(Icons.warning_amber_rounded, color: Colors.black87),
+                Icon(FontAwesomeIcons.tablets, color: Colors.grey.shade800,size: 20,),
                 title: Text("My medications",
                     style: Theme
                         .of(context)
@@ -195,7 +197,7 @@ class DrawerSlide extends StatelessWidget {
                   );
                 },
                 leading:
-                Icon(Icons.contact_phone_outlined, color: Colors.black87),
+                Icon(FontAwesomeIcons.phone, color: Colors.grey.shade800,size: 20,),
                 title: Text("Contact us",
                     style: Theme
                         .of(context)
@@ -210,15 +212,15 @@ class DrawerSlide extends StatelessWidget {
               child: Ink(
                 child: Container(
                   decoration: const ShapeDecoration(
-                      color: Colors.white54, shape: CircleBorder()),
+                      color: Colors.white, shape: CircleBorder()),
                   height: 30.0,
                   width: 30.0,
                   alignment: Alignment.center,
                   child: IconButton(
                     icon: Icon(
-                      Icons.arrow_back_outlined,
-                      color: Colors.black,
-                      size: 14.0,
+                      FontAwesomeIcons.angleLeft,
+                      color: Colors.grey.shade800,
+                      size: 16.0,
                     ),
                     onPressed: () {
                       Navigator.push(

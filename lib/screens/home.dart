@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:path/path.dart';
 import 'package:schhs_my_app_v2a/screens/about.dart';
 import 'package:schhs_my_app_v2a/screens/appoints.dart';
 import 'package:schhs_my_app_v2a/screens/clinics.dart';
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.only(left:8.0,top:8,right: 30,bottom: 8),
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -64,32 +65,26 @@ class HomePage extends StatelessWidget {
           child: Container(
             // height: MediaQuery.of(context).size.width,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(color: Colors.blueGrey.shade100),
-            child: Column(
-                children: [
+            decoration: BoxDecoration(color: Colors.white),
+            child: Column(children: [
               Row(
-                //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                   // width: MediaQuery.of(context).size.width,
-                   // color: Colors.white,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(
-                          vertical: 0, horizontal: 20.0),
-                      child: Text('Welcome',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                          color: Color(0xFF3ab2c2),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 26.0,
-                        ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'Welcome',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Color(0xFF3ab2c2),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 26.0,
                       ),
                     ),
                   ),
-                  Container(  child: Image.asset(
-                    'assets/images/circles2.png', fit: BoxFit.fill,
-                    ),
-                    alignment: Alignment.topRight,
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20.0),
+                    child: Image.asset('assets/images/circles2.png'),
                   ),
                 ],
               ),
@@ -103,31 +98,29 @@ class HomePage extends StatelessWidget {
                         child: Center(
                             child: InkWell(
                           child: RichText(
-                            text: TextSpan(
-                                text:
-                                    'Sunshine Coast Hospital and Health Service (SCHHS) is the major provider of public health services, health education and research across the Sunshine Coast, Gympie and Noosa local government areas.\n \nWhile Sunshine Coast University Hospital is the region’s centre for acute, critical and specialised care, all our facilities play unique and complementary roles including Nambour General Hospital, Caloundra Health Service, Gympie Hospital, Maleny Soldiers Memorial Hospital, Glenbrook Residential Aged Care Facility, Maroochydore Community Hub, Janelle Killick Community Care Unit and other community health services.\n \nWe work in partnership with ',
-                                style: Theme.of(context).textTheme.bodyText1,
+                            text: TextSpan(text: 'Sunshine Coast Hospital and Health Service (SCHHS) is the major provider of public health services, health education and research across the Sunshine Coast, Gympie and Noosa local government areas.',
+                                style: Theme.of(context).textTheme.headline5,
                                 children: <TextSpan>[
                                   TextSpan(
                                       text:
-                                          'Central Queensland, Wide Bay, Sunshine Coast PHN',
+                                          '\n\nStay informed with the latest updates on coronavirus (COVID-19)',
                                       style:
                                           Theme.of(context).textTheme.headline6,
                                       recognizer: TapGestureRecognizer()
-                                        ..onTap = () {
-                                          launch('https://www.ourphn.org.au/');
+                                        ..onTap = () {launch('https://www.health.qld.gov.au/sunshinecoast/covid-19');
                                         }),
-                                  TextSpan(
-                                    text:
-                                        ' the regions primary health provider.',
-                                    style:
-                                        Theme.of(context).textTheme.bodyText1,
-                                  )
                                 ]),
                           ),
                         ))),
                   )
                 ],
+              ),
+              Divider(
+                thickness: 2,
+                color: Color(0xFF3ab2c2),
+                indent: 20,
+                endIndent: 20,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -136,86 +129,241 @@ class HomePage extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.expand(width: 180, height: 80),
-                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return AboutPage();},),);},
-                            child: Text('About', style: TextStyle(color: Color(0xFF3ab2c2), fontSize: 18),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.expand(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.teal.shade50, elevation: 4),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return AboutPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'About',
+                              style: TextStyle(
+                                  color: Color(0xFF3ab2c2), fontSize: 18),
+                            ),
                             //icon: Icon(Icons.home_outlined,),),),
+                          ),
                         ),
-                      ),),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
-                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return ClinicsPage();},),);},
-                            child: Text('Clinics and \nday services', style: TextStyle(color: Colors.white,fontSize: 18),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF3ab2c2),
+                              elevation: 4,
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return ClinicsPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Clinics and \nday services',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
                             //icon: Icon(Icons.airline_seat_individual_suite_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                          ),
                         ),
-                      ),),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
-                              child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return DemPage();},),);},
-                            child: Text('Emergency', style: TextStyle(color: Color(0xFF3ab2c2),fontSize: 18),),
-                           // icon: Icon(Icons.healing_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2), ),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.teal.shade50, elevation: 4),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return DemPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Emergency',
+                              style: TextStyle(
+                                  color: Color(0xFF3ab2c2), fontSize: 18),
+                            ),
+                            // icon: Icon(Icons.healing_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2), ),),
+                          ),
                         ),
-                      ),),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
-                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return MedicationsPage();},),);},
-                            child: Text('Medications', style: TextStyle(color: Colors.white,fontSize: 18),),
-                           // icon: Icon(Icons.warning_amber_rounded),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF3ab2c2),
+                              elevation: 4,
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return MedicationsPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Medications',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                            // icon: Icon(Icons.warning_amber_rounded),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                          ),
                         ),
-                      ),),
+                      ),
                     ],
                   ),
                   Column(
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.expand(width: 180, height: 80),
-                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return FacilitiesPage();},),);},
-                            child: Text('Facilities', style: TextStyle(color: Colors.white, fontSize: 18),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.expand(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF3ab2c2),
+                              elevation: 4,
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return FacilitiesPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Facilities',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
                             //icon: Icon(Icons.local_hospital_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                          ),
                         ),
-                      ),),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
-                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4,),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return AppointPage();},),);},
-                            child: Text('Appointments\nand referrals', style: TextStyle(color: Color(0xFF3ab2c2), fontSize: 18),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.teal.shade50,
+                              elevation: 4,
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return AppointPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Appointments\nand referrals',
+                              style: TextStyle(
+                                  color: Color(0xFF3ab2c2), fontSize: 18),
+                            ),
                             //icon: Icon(Icons.calendar_today_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),),),
+                          ),
                         ),
-                      ),),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
-                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2),elevation: 4,),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return CommunityPage();},),);},
-                            child: Text('Community', style: TextStyle(color: Colors.white, fontSize: 18),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Color(0xFF3ab2c2),
+                              elevation: 4,
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return CommunityPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Community',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
                             //icon: Icon(Icons.people_outline),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2), ),),
+                          ),
                         ),
-                      ),),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: ConstrainedBox(constraints: BoxConstraints.tightFor(width: 180, height: 80),
-                          child: ElevatedButton(style: ElevatedButton.styleFrom(primary: Colors.teal.shade50, elevation: 4,),
-                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {return ContactsPage();},),);},
-                            child: Text('Contact', style: TextStyle(color: Color(0xFF3ab2c2), fontSize: 18),),
+                        child: ConstrainedBox(
+                          constraints:
+                              BoxConstraints.tightFor(width: 180, height: 80),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.teal.shade50,
+                              elevation: 4,
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return ContactsPage();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              'Contact',
+                              style: TextStyle(
+                                  color: Color(0xFF3ab2c2), fontSize: 18),
+                            ),
                             //icon: Icon(Icons.contact_phone_outlined),style: ElevatedButton.styleFrom(primary: Color(0xFF3ab2c2), ),),
+                          ),
                         ),
-                      ),),
+                      ),
                     ],
-
                   ),
-
                 ],
-              ),SizedBox(height: 25),
+              ),
+              SizedBox(height: 25),
               Container(
                 decoration: BoxDecoration(
                   // borderRadius: BorderRadius.circular(10.0),

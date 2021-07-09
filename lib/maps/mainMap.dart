@@ -31,7 +31,6 @@ class _MapsPageState extends State<MapsPage> {
         width: MediaQuery.of(context).size.width * 0.98,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(25.0,5.0,20.0,5.0),
-
           child: GoogleMap( //Map widget from google_maps_flutter package
           zoomGesturesEnabled: true, //enable Zoom in, out on map
           initialCameraPosition: CameraPosition( //initial position in map
