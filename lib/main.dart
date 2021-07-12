@@ -1,12 +1,14 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:schhs_my_app_v2a/screens/home.dart';
+import 'package:schhs_my_app_v2a/screens/splash_screen.dart';
 import 'logic/constants.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart' as pathProvider;
 import 'med.dart';
+
 
 
 Future<void> main() async {
@@ -35,8 +37,7 @@ class MyApp extends StatelessWidget {
       color: Colors.white,
       home: Scaffold(
           //  backgroundColor: Colors.white,
-          body: HomePage(
-          )),
+          body: HomePage()),
     );
   }
 }
