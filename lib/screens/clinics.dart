@@ -1,16 +1,38 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+import 'home.dart';
+
+
+
 
 class ClinicsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar:
+      AppBar(
         backgroundColor: Color(0xFFc1c1b2),
-        title: Text(
-          "Clinics and Day Services",
-          style: TextStyle(fontSize: 26.0),
-        ),
+        title: Text("Clinics and Day Services"),
+        actions: [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: IconButton(
+                icon: Icon(
+                  Icons.home_sharp,
+                  size: 26.0,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return HomePage();
+                    }),
+                  );
+                }),
+          ),
+        ],
       ),
       body: Center(
         child: Column(
