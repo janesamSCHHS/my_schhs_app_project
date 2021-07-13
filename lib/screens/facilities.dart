@@ -315,12 +315,12 @@ class FacilitiesPage extends StatelessWidget {
       );
 
   Widget buildImageCard({required Widget? child}) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 14.0, horizontal: 0.0),
+        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
         child: Card(
-          elevation: 4.0,
+          elevation: 3.0,
           clipBehavior: Clip.antiAlias,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: child,
         ),

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
+
+import 'package:schhs_my_app_v2a/med_list_screen.dart';
 import 'package:schhs_my_app_v2a/screens/about.dart';
 import 'package:schhs_my_app_v2a/screens/appoints.dart';
 import 'package:schhs_my_app_v2a/screens/clinics.dart';
@@ -28,7 +30,7 @@ class HomePage extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(left:8.0,top:8,right: 30,bottom: 8),
+            padding: EdgeInsets.only(left: 8.0, top: 8, right: 30, bottom: 8),
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -98,7 +100,9 @@ class HomePage extends StatelessWidget {
                         child: Center(
                             child: InkWell(
                           child: RichText(
-                            text: TextSpan(text: 'Sunshine Coast Hospital and Health Service (SCHHS) is the major provider of public health services, health education and research across the Sunshine Coast, Gympie and Noosa local government areas.',
+                            text: TextSpan(
+                                text:
+                                    'Sunshine Coast Hospital and Health Service (SCHHS) is the major provider of public health services, health education and research across the Sunshine Coast, Gympie and Noosa local government areas.',
                                 style: Theme.of(context).textTheme.headline5,
                                 children: <TextSpan>[
                                   TextSpan(
@@ -107,7 +111,9 @@ class HomePage extends StatelessWidget {
                                       style:
                                           Theme.of(context).textTheme.headline6,
                                       recognizer: TapGestureRecognizer()
-                                        ..onTap = () {launch('https://www.health.qld.gov.au/sunshinecoast/covid-19');
+                                        ..onTap = () {
+                                          launch(
+                                              'https://www.health.qld.gov.au/sunshinecoast/covid-19');
                                         }),
                                 ]),
                           ),
@@ -225,7 +231,7 @@ class HomePage extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return MedicationsPage();
+                                    return MedicationsListScreen();
                                   },
                                 ),
                               );
@@ -385,7 +391,7 @@ class HomePage extends StatelessWidget {
                               style: Theme.of(context).textTheme.headline3,
                             ),
                           ),
-                        ),
+                        )
                       ],
                     ),
                     Row(

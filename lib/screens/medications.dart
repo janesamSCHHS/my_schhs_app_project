@@ -72,15 +72,6 @@ class _MedicationsPageState extends State<MedicationsPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        //  CircleAvatar(backgroundColor: Colors.green,
-                        //  child: Image.asset(
-                        //    itemData[index].img,
-                        //   fit: BoxFit.cover,
-                        // ),
-                        //  ),
-                        //SizedBox(
-                        // height: 2,
-                        // ),
                         Text(
                           itemData[index].description,
                           style: TextStyle(
@@ -89,6 +80,7 @@ class _MedicationsPageState extends State<MedicationsPage> {
                               letterSpacing: 0.3,
                               height: 1.3),
                         ),
+
                       ],
                     ),
                   ),

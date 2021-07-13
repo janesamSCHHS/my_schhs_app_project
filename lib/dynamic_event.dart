@@ -1,5 +1,4 @@
-import 'dart:convert';
-
+/*import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -10,11 +9,11 @@ class DynamicEvent extends StatefulWidget {
 }
 
 class _DynamicEventState extends State<DynamicEvent> {
-  CalendarController _controller;
-  Map<DateTime, List<dynamic>> _events;
-  List<dynamic> _selectedEvents;
-  TextEditingController _eventController;
-  SharedPreferences prefs;
+  late CalendarController _controller;
+  late Map<DateTime, List<dynamic>> _events;
+  late List<dynamic> _selectedEvents;
+  late TextEditingController _eventController;
+  late SharedPreferences prefs;
 
   @override
   void initState() {
@@ -89,7 +88,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                 });
               },
               builders: CalendarBuilders(
-                selectedDayBuilder: (context, date, events) => Container(
+                selectedBuilder: (context, date, events) => Container(
                     margin: const EdgeInsets.all(4.0),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
@@ -99,7 +98,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                       date.day.toString(),
                       style: const TextStyle(color: Colors.white),
                     )),
-                todayDayBuilder: (context, date, events) => Container(
+                holidayBuilder: (context, date, events) => Container(
                     margin: const EdgeInsets.all(4.0),
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
@@ -110,7 +109,7 @@ class _DynamicEventState extends State<DynamicEvent> {
                       style: const TextStyle(color: Colors.white),
                     )),
               ),
-              calendarController: _controller,
+              calendarController: _controller, lastDay: null,
             ),
             ..._selectedEvents.map((event) => Padding(
               padding: const EdgeInsets.all(8.0),
@@ -174,3 +173,4 @@ class _DynamicEventState extends State<DynamicEvent> {
         ));
   }
 }
+*/

@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       color: Colors.white,
       home: Scaffold(
           //  backgroundColor: Colors.white,
-          body: HomePage()),
+          body: Splash1()),
     );
   }
 }
