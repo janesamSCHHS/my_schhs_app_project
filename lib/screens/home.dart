@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: EdgeInsets.only(left: 8.0, top: 8, right: 30, bottom: 8),
+            padding: EdgeInsets.only(left: 8.0, top: 8, right: 20, bottom: 8),
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -137,7 +137,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.expand(width: 180, height: 80),
+                              BoxConstraints.expand(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.teal.shade50, elevation: 4),
@@ -164,7 +164,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.tightFor(width: 180, height: 80),
+                              BoxConstraints.tightFor(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xFF3ab2c2),
@@ -193,7 +193,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.tightFor(width: 180, height: 80),
+                              BoxConstraints.tightFor(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 primary: Colors.teal.shade50, elevation: 4),
@@ -220,7 +220,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.tightFor(width: 180, height: 80),
+                              BoxConstraints.tightFor(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xFF3ab2c2),
@@ -253,7 +253,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.expand(width: 180, height: 80),
+                              BoxConstraints.expand(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xFF3ab2c2),
@@ -282,7 +282,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.tightFor(width: 180, height: 80),
+                              BoxConstraints.tightFor(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Colors.teal.shade50,
@@ -311,7 +311,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.tightFor(width: 180, height: 80),
+                              BoxConstraints.tightFor(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Color(0xFF3ab2c2),
@@ -340,7 +340,7 @@ class HomePage extends StatelessWidget {
                         padding: const EdgeInsets.all(3.0),
                         child: ConstrainedBox(
                           constraints:
-                              BoxConstraints.tightFor(width: 180, height: 80),
+                              BoxConstraints.tightFor(width: 170, height: 80),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Colors.teal.shade50,
@@ -420,7 +420,7 @@ class HomePage extends StatelessWidget {
                                           recognizer: TapGestureRecognizer()
                                             ..onTap = () {
                                               launch(
-                                                  'https://app2.vision6.com.au/em/message/email/view.php?id=1542655&a=95430&k=FxSpRklE29vxMCaIgsX-2hg_VH_u1Zw_jf0hOWDuTfw');
+                                                  'https://app.vision6.com.au/em/message/email/view.php?id=1559515&amp;a=95430&amp;k=xW_X5RobPznyUonzy5iUWOzNb0KAFnuHSCD9wIudoF8');
                                             }),
                                       TextSpan(
                                         text:

@@ -84,13 +84,13 @@ class AboutPage extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(2.0),
                   child: Container(
-                      color: Colors.teal.shade300, height: 120.0, width: 40, child: Center(child: Padding(
+                      color: Colors.teal.shade300, height: 130.0, width: 40, child: Center(child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
                             Text('Our vision', style: TextStyle(fontFamily: 'Meta', fontSize: 20.0, fontWeight: FontWeight.bold, letterSpacing: 1.0),),
                             SizedBox(height: 20.0,),
-                            Text('Health and wellbeing through exceptional care.', style: TextStyle(fontFamily: 'Meta', fontSize: 16.0,),),
+                            Text('Health and wellbeing through exceptional care.', style: TextStyle(fontFamily: 'Meta', fontSize: 14.0,),),
                           ],
                         ),
                       ))),
@@ -111,7 +111,7 @@ class AboutPage extends StatelessWidget {
                       children: [
                         Text('Our purpose', style: TextStyle(fontFamily: 'Meta', fontSize: 20.0,fontWeight: FontWeight.bold, letterSpacing: 1.0),),
                         SizedBox(height: 20.0,),
-                        Text('To provide high quality healthcare in collaboration with our communities and partners, enhanced through education and research.', style: TextStyle(fontFamily: 'Meta', fontSize: 16.0,),),
+                        Text('To provide high quality healthcare in collaboration with our communities and partners, enhanced through education and research.', style: TextStyle(fontFamily: 'Meta', fontSize: 14.0,),),
                       ],
                     ),
                   ))),

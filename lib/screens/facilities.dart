@@ -110,7 +110,7 @@ class FacilitiesPage extends StatelessWidget {
                       ),
                       ),
                       onPressed: () =>
-                          MapsLauncher.launchQuery('Hospital Road, Nambour QLD 4560'),
+                          MapsLauncher.launchQuery('Nambour General Hospital, Nambour QLD 4560'),
                     ),
                     TextButton(
                       child: Text('More information', style: TextStyle(color: Color(0xFF3ab2c2),),),
