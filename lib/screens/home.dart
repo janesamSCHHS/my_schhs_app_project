@@ -1,18 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
-
 import 'package:schhs_my_app_v2a/med_list_screen.dart';
 import 'package:schhs_my_app_v2a/screens/about.dart';
 import 'package:schhs_my_app_v2a/screens/appoints.dart';
 import 'package:schhs_my_app_v2a/screens/clinics.dart';
 import 'package:schhs_my_app_v2a/screens/contact.dart';
 import 'package:schhs_my_app_v2a/screens/facilities.dart';
-import 'package:schhs_my_app_v2a/screens/medications.dart';
-import 'package:schhs_my_app_v2a/services/ourFacilities.dart';
 import 'package:schhs_my_app_v2a/widgets/drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 import 'community.dart';
 import 'emergency.dart';
 
@@ -413,58 +410,15 @@ class HomePage extends StatelessWidget {
                                     children: <TextSpan>[
                                       TextSpan(
                                           text:
-                                              'Positive wastewater detection in Noosa',
+                                              'All our latest media releases can be found here',
                                           style: Theme.of(context)
                                               .textTheme
                                               .headline6,
                                           recognizer: TapGestureRecognizer()
                                             ..onTap = () {
                                               launch(
-                                                  'https://app.vision6.com.au/em/message/email/view.php?id=1559515&amp;a=95430&amp;k=xW_X5RobPznyUonzy5iUWOzNb0KAFnuHSCD9wIudoF8');
+                                                  'https://www.health.qld.gov.au/sunshinecoast/news-and-media/media-releases');
                                             }),
-                                      TextSpan(
-                                        text:
-                                            ' \nFragments of SARS-CoV-2 have been detected at the Noosa wastewater treatment plant.',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2,
-                                      ),
-                                      TextSpan(
-                                          text:
-                                              '\n \nGympie women urged to book in for a breast screen',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline6,
-                                          recognizer: TapGestureRecognizer()
-                                            ..onTap = () {
-                                              launch(
-                                                  'https://app2.vision6.com.au/em/message/email/view.php?id=1541859&a=95430&k=Aqvf8fnY_tgNoXszNMoHTeKOPRfx2BYtn18wz7xfPKw');
-                                            }),
-                                      TextSpan(
-                                        text:
-                                            ' \nGympie women aged over 50 years old are being urged to book in for their regular free breast screen every two years.',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2,
-                                      ),
-                                      TextSpan(
-                                          text:
-                                              '\n \nPoint Your Health in the Right Direction',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headline6,
-                                          recognizer: TapGestureRecognizer()
-                                            ..onTap = () {
-                                              launch(
-                                                  'https://app.vision6.com.au/em/message/email/view.php?id=1539956&a=95430&k=SLo13YujFn9Uyrm61O6LefZIwmtEzWXRU5Ad_CMC5Jg');
-                                            }),
-                                      TextSpan(
-                                        text:
-                                            ' \nThe Health Compass lists a broad range of local, low cost services and activities available across the Sunshine Coast and Gympie to support physical, emotional and social health.',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodyText2,
-                                      ),
                                     ],
                                   ),
                                 ),

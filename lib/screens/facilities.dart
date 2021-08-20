@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:maps_launcher/maps_launcher.dart';
-import 'package:schhs_my_app_v2a/services/ourFacilities.dart';
+
 import './home.dart';
 
 class FacilitiesPage extends StatelessWidget {
@@ -53,19 +53,29 @@ class FacilitiesPage extends StatelessWidget {
                   alignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     TextButton(
-                      child: Text('View Map', style: TextStyle(color: Color(0xFF3ab2c2),
+                      child: Text(
+                        'View Map',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
                       ),
-                      ),
-                      onPressed: () =>
-                          MapsLauncher.launchQuery('6 Doherty Street, Birtinya Qld 4575'),
+                      onPressed: () => MapsLauncher.launchQuery(
+                          '6 Doherty Street, Birtinya Qld 4575'),
                     ),
                     TextButton(
-                      child: Text('More information', style: TextStyle(color: Color(0xFF3ab2c2),),),
-                     onPressed: () {Navigator.push(
-                        context, MaterialPageRoute(builder: (context) {
-                       return OurFacilities();
-                     }),
-                      );
+                      child: Text(
+                        'More information',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return OurFacilities();
+                          }),
+                        );
                       },
                     ),
                     IconButton(
@@ -106,19 +116,29 @@ class FacilitiesPage extends StatelessWidget {
                   alignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     TextButton(
-                      child: Text('View Map', style: TextStyle(color: Color(0xFF3ab2c2),
+                      child: Text(
+                        'View Map',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
                       ),
-                      ),
-                      onPressed: () =>
-                          MapsLauncher.launchQuery('Nambour General Hospital, Nambour QLD 4560'),
+                      onPressed: () => MapsLauncher.launchQuery(
+                          'Nambour General Hospital, Nambour QLD 4560'),
                     ),
                     TextButton(
-                      child: Text('More information', style: TextStyle(color: Color(0xFF3ab2c2),),),
-                      onPressed: () {Navigator.push(
-                        context, MaterialPageRoute(builder: (context) {
-                        return OurFacilities();
-                      }),
-                      );
+                      child: Text(
+                        'More information',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return OurFacilities();
+                          }),
+                        );
                       },
                     ),
                     IconButton(
@@ -159,19 +179,29 @@ class FacilitiesPage extends StatelessWidget {
                   alignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     TextButton(
-                      child: Text('View Map', style: TextStyle(color: Color(0xFF3ab2c2),
+                      child: Text(
+                        'View Map',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
                       ),
-                      ),
-                      onPressed: () =>
-                          MapsLauncher.launchQuery('West Terrace, Caloundra QLD 4551'),
+                      onPressed: () => MapsLauncher.launchQuery(
+                          'West Terrace, Caloundra QLD 4551'),
                     ),
                     TextButton(
-                      child: Text('More information', style: TextStyle(color: Color(0xFF3ab2c2),),),
-                      onPressed: () {Navigator.push(
-                        context, MaterialPageRoute(builder: (context) {
-                        return OurFacilities();
-                      }),
-                      );
+                      child: Text(
+                        'More information',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return OurFacilities();
+                          }),
+                        );
                       },
                     ),
                     IconButton(
@@ -211,19 +241,29 @@ class FacilitiesPage extends StatelessWidget {
                   alignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     TextButton(
-                      child: Text('View Map', style: TextStyle(color: Color(0xFF3ab2c2),
+                      child: Text(
+                        'View Map',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
                       ),
-                      ),
-                      onPressed: () =>
-                          MapsLauncher.launchQuery('12 Henry St, Gympie QLD 4570'),
+                      onPressed: () => MapsLauncher.launchQuery(
+                          '12 Henry St, Gympie QLD 4570'),
                     ),
                     TextButton(
-                      child: Text('More information', style: TextStyle(color: Color(0xFF3ab2c2),),),
-                      onPressed: () {Navigator.push(
-                        context, MaterialPageRoute(builder: (context) {
-                        return OurFacilities();
-                      }),
-                      );
+                      child: Text(
+                        'More information',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return OurFacilities();
+                          }),
+                        );
                       },
                     ),
                     IconButton(
@@ -263,19 +303,29 @@ class FacilitiesPage extends StatelessWidget {
                   alignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     TextButton(
-                      child: Text('View Map', style: TextStyle(color: Color(0xFF3ab2c2),
+                      child: Text(
+                        'View Map',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
                       ),
-                      ),
-                      onPressed: () =>
-                          MapsLauncher.launchQuery('17 Bean St, Maleny QLD 4552'),
+                      onPressed: () => MapsLauncher.launchQuery(
+                          '17 Bean St, Maleny QLD 4552'),
                     ),
                     TextButton(
-                      child: Text('More information', style: TextStyle(color: Color(0xFF3ab2c2),),),
-                      onPressed: () {Navigator.push(
-                        context, MaterialPageRoute(builder: (context) {
-                        return OurFacilities();
-                      }),
-                      );
+                      child: Text(
+                        'More information',
+                        style: TextStyle(
+                          color: Color(0xFF3ab2c2),
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return OurFacilities();
+                          }),
+                        );
                       },
                     ),
                     IconButton(
@@ -328,6 +378,7 @@ class FacilitiesPage extends StatelessWidget {
 }
 
 class ImageTile {}
+
 class _ImageTile extends StatelessWidget {
   final String? imagePath;
   final String? facilityName;
@@ -349,20 +400,33 @@ class _ImageTile extends StatelessWidget {
             height: 160,
             fit: BoxFit.fill,
           ),
-          Positioned(bottom: 2, right: 16, left: 16,
-            child: Text(facilityName!, style: TextStyle(
-                backgroundColor: Color(0xFF3ab2c2), fontWeight: FontWeight.bold, color: Colors.white, fontSize: 14,),
-            ),),],),
+          Positioned(
+            bottom: 2,
+            right: 16,
+            left: 16,
+            child: Text(
+              facilityName!,
+              style: TextStyle(
+                backgroundColor: Color(0xFF3ab2c2),
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 14,
+              ),
+            ),
+          ),
+        ],
+      ),
       Padding(
         padding: EdgeInsets.all(8).copyWith(bottom: 0),
         child: Text.rich(
-          TextSpan(text: facilityDesc), style: TextStyle(
-              fontSize: 12, color: Colors.black87, fontFamily: 'Meta'),),),
-
+          TextSpan(text: facilityDesc),
+          style: TextStyle(
+              fontSize: 12, color: Colors.black87, fontFamily: 'Meta'),
+        ),
+      ),
     ]);
   }
 }
-
 
 class OurFacilities extends StatefulWidget {
   @override
@@ -412,11 +476,40 @@ class _OurFacilitiesState extends State<OurFacilities> {
         index: index,
         children: <Widget>[
           Container(
-            color: Colors.orange.shade50,
+            color: Colors.white,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Text(
-                'Our facilities The Sunshine Coast HHS provides services through:\n•	Sunshine Coast University Hospital\n•	Nambour General Hospital•	Caloundra Health Service\n•	Gympie Hospital\n•	Maleny Soldiers Memorial Hospitaland a comprehensive range of sub-acute, ambulatory and extended care, community health, mental health and oral health services, \nand an aged care services at the Glenbrook Residential Aged Care Facility.\nThe Sunshine Coast University Hospital (SCUH) at Birtinya commenced services in March 2017, and will expand to a 738-bed facility. SCUH offers a range of new and expanded services for the Sunshine Coast, including the Sunshine Coast Health Institute – a unique partnership for education and research - on site.\nThrough the opening of SCUH and the transformation of existing facilities and Nambour and Caloundra, the Sunshine Coast HHS is investing to meet the growing healthcare needs of our community and deliver exceptional care into the future.\n \nCar parking, transport and maps\n•	Location\n•	Maps\n•	Parking (including disabled parking)\n•	Public transport',
+                'Our facilities '
+                '\nThe Sunshine Coast HHS provides services through:'
+                '\n•	Sunshine Coast University Hospital'
+                '\n•	Nambour General Hospital'
+                '\n•	Caloundra Health Service'
+                '\n•	Gympie Hospital'
+                '\n•	Maleny Soldiers Memorial Hospital '
+                '\nand a comprehensive range of sub-acute, ambulatory and extended care, community health, mental health and oral health services, and aged care services at the Glenbrook Residential Aged Care Facility.'
+                '\n\nThe Sunshine Coast University Hospital (SCUH) at Birtinya commenced services in March 2017, and will expand to a 738-bed facility. SCUH offers a range of new and expanded services for the Sunshine Coast, including the Sunshine Coast Health Institute – a unique partnership for education and research - on site.'
+                '\nThrough the opening of SCUH and the transformation of existing facilities and Nambour and Caloundra, the Sunshine Coast HHS is investing to meet the growing healthcare needs of our community and deliver exceptional care into the future.'
+                '\n\nCar parking, transport and maps'
+                '\n•	Location'
+                '\n•	Maps'
+                '\n•	Parking (including disabled parking)'
+                '\n•	Public transport',
+                style: TextStyle(color: Colors.black87, fontSize: 12.0),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.blueGrey[50],
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Text(
+                '\n•	Nambour General Hospital'
+                '\n•	Caloundra Health Service'
+                '\n•	Gympie Hospital'
+                '\n•	Maleny Soldiers Memorial Hospital '
+                'The Sunshine Coast University Hospital (SCUH) at Birtinya commenced services in March 2017, and will expand to a 738-bed facility. SCUH offers a range of new and expanded services for the Sunshine Coast, including the Sunshine Coast Health Institute – a unique partnership for education and research - on site.'
+                '\nThrough the opening of SCUH and the transformation of existing facilities and Nambour and Caloundra, the Sunshine Coast HHS is investing to meet the growing healthcare needs of our community and deliver exceptional care into the future.',
                 style: TextStyle(color: Colors.black87, fontSize: 12.0),
               ),
             ),
@@ -424,13 +517,8 @@ class _OurFacilitiesState extends State<OurFacilities> {
           Container(
               child: Center(
                   child: Image.asset(
-                    "assets/images/ngh.jpg",
-                  ))),
-          Container(
-              child: Center(
-                  child: Image.asset(
-                    "assets/images/scuh.jpg",
-                  ))),
+            "assets/images/scuh.jpg",
+          ))),
         ],
       ),
     );

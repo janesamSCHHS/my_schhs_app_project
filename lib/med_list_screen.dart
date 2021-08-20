@@ -3,6 +3,7 @@ import 'package:hive/hive.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
 import 'package:schhs_my_app_v2a/screens/home.dart';
 import 'package:schhs_my_app_v2a/screens/medications.dart';
+
 import 'add_or_edit_med_screen.dart';
 import 'med.dart';
 
@@ -31,29 +32,39 @@ class MedicationsListState extends State<MedicationsListScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
         appBar: NewGradientAppBar(
-            gradient: LinearGradient(
-                colors: [Colors.lightGreen, Colors.green, Colors.teal]),
-            title: Text("My Medications"),
+          gradient: LinearGradient(
+              colors: [Colors.lightGreen, Colors.green, Colors.teal]),
+          title: Text("My Medications"),
           actions: <Widget>[
             IconButton(
-              icon: Icon(Icons.add, size: 30,),
+              icon: Icon(
+                Icons.add,
+                size: 30,
+              ),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => AddOrEditMedicationScreen(false)));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => AddOrEditMedicationScreen(false)));
               },
             ),
             IconButton(
-              icon: Icon(Icons.info_rounded, size: 26,),
+              icon: Icon(
+                Icons.info_rounded,
+                size: 26,
+              ),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context){
-                  return MedicationsPage();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return MedicationsPage();
                   }),
-                );},),
+                );
+              },
+            ),
             Padding(
               padding: EdgeInsets.all(8.0),
               child: IconButton(
@@ -72,10 +83,34 @@ class MedicationsListState extends State<MedicationsListScreen> {
             ),
           ],
         ),
-        body: Container(
-            padding: EdgeInsets.all(15),
-            child: ListView.builder(
-              scrollDirection: Axis.vertical,
+        body: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: Image(
+                image: AssetImage('assets/images/medications.png'),
+                height: 160,
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 60,
+                child: Center(
+                  child: Text(
+                    "• Please add your medications here using  '+'  icon.\n• For further information click  ' i '  above.",
+                    style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.green,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
                 itemCount: listMedications.length,
                 itemBuilder: (context, position) {
                   Medication getMedication = listMedications[position];
@@ -84,52 +119,83 @@ class MedicationsListState extends State<MedicationsListScreen> {
                   var specInstructions = getMedication.specInstructions;
                   var dateStarted = getMedication.dateStarted;
                   return Card(
-                   // color: Colors.lightBlueAccent,
+                    // color: Colors.lightBlueAccent,
                     elevation: 8,
                     child: Container(
                       height: 135,
-                      padding: EdgeInsets.only(left: 15,top: 10,right: 15,bottom:15,),
+                      padding: EdgeInsets.only(
+                        left: 15,
+                        top: 10,
+                        right: 15,
+                        bottom: 15,
+                      ),
                       child: Stack(
                         children: <Widget>[
-                          Align(alignment: Alignment.topLeft,
+                          Align(
+                              alignment: Alignment.topLeft,
                               child: Text(getMedication.medName,
-                                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700,color: Colors.black87))),
-                          Align(alignment: Alignment.topRight,
-                                child: Container(
-                                  margin: EdgeInsets.only(right: 25),
-                                  child: IconButton(
-                                      icon: Icon(Icons.edit, size: 20.0,color: Colors.lightGreen,),
-                                      onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (_) => AddOrEditMedicationScreen(
-                                            true, position, getMedication)));
-                                      }),
-                                ),
-                              ),
-                          Align(alignment: Alignment.topRight,
-                                child: IconButton(
-                                    icon: Icon(Icons.delete, size: 20.0, color: Colors.red),
-                                    onPressed: (){
-                                      final box = Hive.box<Medication>('medication');
-                                      box.deleteAt(position);
-                                      setState(() => {
-                                        listMedications.removeAt(position)
-                                      });
-                                    }),
-                              ),
-                            Align(alignment: Alignment.centerLeft,
-                            child: Text("Dose: $dose    |   Strength: $strength ",
-                                style: TextStyle(fontSize: 14,color: Colors.black87)),
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.black87))),
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Container(
+                              margin: EdgeInsets.only(right: 25),
+                              child: IconButton(
+                                  icon: Icon(
+                                    Icons.edit,
+                                    size: 20.0,
+                                    color: Colors.lightGreen,
+                                  ),
+                                  onPressed: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (_) =>
+                                                AddOrEditMedicationScreen(true,
+                                                    position, getMedication)));
+                                  }),
+                            ),
                           ),
-                            Align(
-                              alignment: Alignment.bottomLeft,
-                              child: Text('Date started: $dateStarted \nInstructions: $specInstructions',
-                                  style: TextStyle(fontSize: 14,color: Colors.black87),),),
-                              ],
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: IconButton(
+                                icon: Icon(Icons.delete,
+                                    size: 20.0, color: Colors.red),
+                                onPressed: () {
+                                  final box =
+                                      Hive.box<Medication>('medication');
+                                  box.deleteAt(position);
+                                  setState(() =>
+                                      {listMedications.removeAt(position)});
+                                }),
                           ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                                "Dose: $dose    |   Strength: $strength ",
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.black87)),
                           ),
-                          );
-      },),),),);
+                          Align(
+                            alignment: Alignment.bottomLeft,
+                            child: Text(
+                              'Date started: $dateStarted \nInstructions: $specInstructions',
+                              style: TextStyle(
+                                  fontSize: 14, color: Colors.black87),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -74,7 +74,7 @@ class _MedicationsPageState extends State<MedicationsPage> {
                     ExpansionPanel(
                       body: Container(
                         padding: EdgeInsets.only(
-                            left: 10, top: 3, right: 10, bottom: 10),
+                            left: 10, top: 3, right: 20, bottom: 10),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,8 +82,8 @@ class _MedicationsPageState extends State<MedicationsPage> {
                             Text(
                               itemData[index].description,
                               style: TextStyle(
-                                  color: Colors.grey[700],
-                                  fontSize: 15,
+                                  color: Colors.grey[800],
+                                  fontSize: 12,
                                   letterSpacing: 0.3,
                                   height: 1.3),
                             ),
@@ -139,8 +139,7 @@ class _MedicationsPageState extends State<MedicationsPage> {
         headerItem: 'Problems or side effects?',
         subHeader: 'SEEK SUPPORT!',
         description:
-            "You should always seek healthcare or advice from a health professional such as your doctor or pharmacist. You can also report your adverse event to the Australian Therapeutic GoodsAdministration by visiting www.tga.gov.au/reporting-problems."
-            "\nRemember to include the details of any medication allergies,",
+            "You should always seek healthcare or advice from a health professional such as your doctor or pharmacist.\nYou can also report your adverse event to the Australian Therapeutic Goods Administration by visiting www.tga.gov.au/reporting-problems.\n\nREMEMBER to include the details of any medication allergies or reactions on your Medicines list.",
         colorsItem: Colors.green),
     ItemModel(
       headerItem: 'Leaving Hospital',
