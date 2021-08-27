@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:schhs_my_app_v2a/logic/constants.dart';
-
+import 'package:schhs_app2021/logic/constants.dart';
 
 class CardBox extends StatelessWidget {
   final Widget? child;
@@ -8,8 +7,14 @@ class CardBox extends StatelessWidget {
   final EdgeInsets? margin;
   final double? width, height;
 
-
-  const CardBox({required Key? key,  required this.padding, required this.margin, required this.child, required this.width, required this.height}) : super(key: key);
+  const CardBox(
+      {required Key? key,
+      required this.padding,
+      required this.margin,
+      required this.child,
+      required this.width,
+      required this.height})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +22,9 @@ class CardBox extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: COLOR_WHITE,
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: COLOR_GREY.withAlpha(40), width: 2)
-      ),
+          color: COLOR_WHITE,
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(color: COLOR_GREY.withAlpha(40), width: 2)),
       padding: padding,
       child: Center(child: child),
     );

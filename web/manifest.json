@@ -1,6 +1,6 @@
 {
-    "name": "schhs_my_app_v2a",
-    "short_name": "schhs_my_app_v2a",
+    "name": "schhs_app2021",
+    "short_name": "schhs_app2021",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

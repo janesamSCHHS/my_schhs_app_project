@@ -9,7 +9,10 @@ class ClinicsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFc1c1b2),
-        title: Text("Clinics and Day Services"),
+        title: Text(
+          "Clinics and Day Services",
+          style: TextStyle(fontSize: 19),
+        ),
         actions: [
           Padding(
             padding: EdgeInsets.all(8.0),
@@ -55,11 +58,12 @@ class ClinicsPage extends StatelessWidget {
                 height: 20,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   ButtonBar(
                       layoutBehavior: ButtonBarLayoutBehavior.constrained,
-                      buttonPadding: EdgeInsets.only(left: 15, right: 15),
+                      buttonPadding: EdgeInsets.only(left: 5, right: 5),
                       children: <Widget>[
                         BBbuttons(
                           title: 'Telehealth',

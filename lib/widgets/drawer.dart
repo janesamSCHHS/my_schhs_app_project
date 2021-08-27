@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:schhs_my_app_v2a/screens/ToDo.dart';
-import 'package:schhs_my_app_v2a/screens/about.dart';
-import 'package:schhs_my_app_v2a/screens/appoints.dart';
-import 'package:schhs_my_app_v2a/screens/clinics.dart';
-import 'package:schhs_my_app_v2a/screens/community.dart';
-import 'package:schhs_my_app_v2a/screens/contact.dart';
-import 'package:schhs_my_app_v2a/screens/emergency.dart';
-import 'package:schhs_my_app_v2a/screens/facilities.dart';
-import 'package:schhs_my_app_v2a/screens/home.dart';
+import 'package:schhs_app2021/screens/ToDo.dart';
+import 'package:schhs_app2021/screens/about.dart';
+import 'package:schhs_app2021/screens/appoints.dart';
+import 'package:schhs_app2021/screens/clinics.dart';
+import 'package:schhs_app2021/screens/community.dart';
+import 'package:schhs_app2021/screens/contact.dart';
+import 'package:schhs_app2021/screens/emergency.dart';
+import 'package:schhs_app2021/screens/facilities.dart';
+import 'package:schhs_app2021/screens/home.dart';
 import '../med_list_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:schhs_my_app_v2a/screens/home.dart';
+import 'package:schhs_app2021/screens/home.dart';
 
 class OurFacilities extends StatefulWidget {
   @override

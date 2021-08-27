@@ -1,15 +1,12 @@
-
-import 'package:splash_screen_view/SplashScreenView.dart';
 import 'package:flutter/material.dart';
-import 'package:schhs_my_app_v2a/screens/home.dart';
-
+import 'package:schhs_app2021/screens/home.dart';
+import 'package:splash_screen_view/SplashScreenView.dart';
 
 class Splash1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     /// Normal Logo Splash screen
-  /*  Widget example1 = SplashScreenView(
+    /*  Widget example1 = SplashScreenView(
       navigateRoute: HomePage(),
       duration: 3000,
       imageSize: 130,
@@ -38,28 +35,7 @@ class Splash1 extends StatelessWidget {
       backgroundColor: Colors.white,
     );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /*   /// Logo with Typer Animated Text example
+    /*   /// Logo with Typer Animated Text example
     Widget example3 = SplashScreenView(
       navigateRoute: HomePage(),
       duration: 3000,
@@ -75,7 +51,7 @@ class Splash1 extends StatelessWidget {
       backgroundColor: Colors.white,
     );*/
 
-   /* /// Logo with Scale Animated Text example
+    /* /// Logo with Scale Animated Text example
     Widget example4 = SplashScreenView(
       navigateRoute: HomePage(),
       duration: 3000,
@@ -106,9 +82,6 @@ class Splash1 extends StatelessWidget {
     return example2;
   }
 }
-
-
-
 
 /*
 void main() {
@@ -160,7 +133,7 @@ class SplashPage extends StatelessWidgetWidget {
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:schhs_my_app_v2a/dynamic_event.dart';
+import 'package:schhs_app2021/dynamic_event.dart';
 
 
 class Splash extends StatefulWidget {

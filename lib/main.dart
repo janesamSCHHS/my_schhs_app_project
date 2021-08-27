@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as pathProvider;
-import 'package:schhs_my_app_v2a/screens/splash_screen.dart';
+import 'package:schhs_app2021/screens/splash_screen.dart';
 
 import 'logic/constants.dart';
 import 'med.dart';

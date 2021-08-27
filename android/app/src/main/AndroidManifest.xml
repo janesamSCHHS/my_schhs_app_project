@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.schhs_my_app_v2a">
+    package="com.example.schhs_app2021">
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
@@ -15,7 +15,7 @@
         </intent>
     </queries>
    <application
-        android:label="schhs_my_app_v2a"
+        android:label="schhs_app2021"
         android:icon="@mipmap/ic_launcher">
        <meta-data android:name="com.google.android.geo.API_KEY"
            android:value="AIzaSyDduCc2URh2YR9eUKzg8U4-oVMuCbr9gXk"/>

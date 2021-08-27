@@ -1,6 +1,5 @@
 import 'package:barcode_scan2/barcode_scan2.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ScanQR extends StatefulWidget {
   ScanQR({Key? key}) : super(key: key);
@@ -9,7 +8,7 @@ class ScanQR extends StatefulWidget {
   _ScanQRState createState() => _ScanQRState();
 }
 
-String qrData = "No data found!";
+String qrData = "No data scanned";
 var data;
 bool hasdata = false;
 
@@ -20,58 +19,33 @@ class _ScanQRState extends State<ScanQR> {
       tag: "Scan QR",
       child: Scaffold(
         appBar: AppBar(
-          title: Text("QR Scanner"),
+          title: Text("Scan your QR code"),
         ),
         body: Container(
-          color: Colors.green,
+          color: Colors.white,
           width: double.infinity,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Flexible(
-                    child: Text(
-                      "Raw Data:  ${(qrData)}",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                  IconButton(
-                    icon: Icon(Icons.launch_outlined),
-                    onPressed: hasdata
-                        ? () async {
-                            if (!await canLaunch(qrData)) {
-                              // print(qrData);
-                              await launch(qrData);
-                            } else {
-                              throw 'Could not launch ';
-                            }
-                          }
-                        : null,
-                  ),
-                ],
-              ),
-              SizedBox(height: 15),
               Container(
-                width: ((MediaQuery.of(context).size.width) / 2) - 45,
+                width: ((MediaQuery.of(context).size.width)),
                 height: 35,
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    primary: Colors.red,
+                    elevation: 4,
+                    primary: Colors.indigo,
                     onSurface: Colors.blue,
                     backgroundColor: Colors.lightBlue[100],
                     shadowColor: Colors.blue,
                     shape: StadiumBorder(),
                     side: BorderSide(
-                      width: 3,
+                      width: 2,
                       color: Colors.blue,
                     ),
                   ),
                   child: Text(
-                    "Scan QR",
+                    "Open camera",
                     style: TextStyle(fontSize: 17),
                   ),
                   onPressed: () async {

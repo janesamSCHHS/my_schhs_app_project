@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:schhs_my_app_v2a/med_list_screen.dart';
-import 'package:schhs_my_app_v2a/screens/about.dart';
-import 'package:schhs_my_app_v2a/screens/appoints.dart';
-import 'package:schhs_my_app_v2a/screens/clinics.dart';
-import 'package:schhs_my_app_v2a/screens/facilities.dart';
-import 'package:schhs_my_app_v2a/widgets/drawer.dart';
+import 'package:schhs_app2021/med_list_screen.dart';
+import 'package:schhs_app2021/screens/about.dart';
+import 'package:schhs_app2021/screens/appoints.dart';
+import 'package:schhs_app2021/screens/clinics.dart';
+import 'package:schhs_app2021/screens/contact.dart';
+import 'package:schhs_app2021/screens/facilities.dart';
+import 'package:schhs_app2021/widgets/drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'ScanQRpage.dart';
 import 'community.dart';
 import 'emergency.dart';
 
@@ -348,7 +348,7 @@ class HomePage extends StatelessWidget {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) {
-                                    return ScanQRHome();
+                                    return ContactsPage();
                                   },
                                 ),
                               );

@@ -1,4 +1,4 @@
-# schhs_my_app_v2a
+# schhs_app2021
 
 First attempt at work project
 This will be an informational mobile

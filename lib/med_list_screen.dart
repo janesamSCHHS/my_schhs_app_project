@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:new_gradient_app_bar/new_gradient_app_bar.dart';
-import 'package:schhs_my_app_v2a/screens/home.dart';
-import 'package:schhs_my_app_v2a/screens/medications.dart';
+import 'package:schhs_app2021/screens/home.dart';
+import 'package:schhs_app2021/screens/medications.dart';
 
 import 'add_or_edit_med_screen.dart';
 import 'med.dart';
@@ -37,12 +37,15 @@ class MedicationsListState extends State<MedicationsListScreen> {
         appBar: NewGradientAppBar(
           gradient: LinearGradient(
               colors: [Colors.lightGreen, Colors.green, Colors.teal]),
-          title: Text("My Medications"),
+          title: Text(
+            "My medications",
+            style: TextStyle(fontSize: 18, letterSpacing: -1),
+          ),
           actions: <Widget>[
             IconButton(
               icon: Icon(
                 Icons.add,
-                size: 30,
+                size: 24,
               ),
               onPressed: () {
                 Navigator.push(
@@ -54,7 +57,7 @@ class MedicationsListState extends State<MedicationsListScreen> {
             IconButton(
               icon: Icon(
                 Icons.info_rounded,
-                size: 26,
+                size: 24,
               ),
               onPressed: () {
                 Navigator.push(
@@ -65,22 +68,19 @@ class MedicationsListState extends State<MedicationsListScreen> {
                 );
               },
             ),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: IconButton(
-                  icon: Icon(
-                    Icons.home_sharp,
-                    size: 26.0,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return HomePage();
-                      }),
-                    );
-                  }),
-            ),
+            IconButton(
+                icon: Icon(
+                  Icons.home_sharp,
+                  size: 24.0,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return HomePage();
+                    }),
+                  );
+                }),
           ],
         ),
         body: Column(
@@ -99,9 +99,9 @@ class MedicationsListState extends State<MedicationsListScreen> {
                 height: 60,
                 child: Center(
                   child: Text(
-                    "• Please add your medications here using  '+'  icon.\n• For further information click  ' i '  above.",
+                    "• Please add your medications here using  '+'  icon\n• For further information click  ' i '  above",
                     style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 14,
                         color: Colors.green,
                         fontWeight: FontWeight.bold),
                   ),

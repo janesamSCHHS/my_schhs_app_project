@@ -1,8 +1,9 @@
 import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:schhs_my_app_v2a/screens/home.dart';
+import 'package:schhs_app2021/screens/home.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 _makingPhoneCall() async {
@@ -109,8 +110,7 @@ class DemPage extends StatelessWidget {
                                   .copyWith(fontSize: 18),
                               children: <TextSpan>[
                                 TextSpan(
-                                  text:
-                                      'CLICK HERE',
+                                  text: 'CLICK HERE',
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline6!
@@ -220,7 +220,10 @@ class DemPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Divider(thickness: 2, color: Colors.red,),
+                      Divider(
+                        thickness: 2,
+                        color: Colors.red,
+                      ),
                       SizedBox(height: 20),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 20),
@@ -231,7 +234,10 @@ class DemPage extends StatelessWidget {
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyText1!
-                                    .copyWith(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.red),
+                                    .copyWith(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.red),
                                 children: <TextSpan>[
                                   TextSpan(
                                       text:
@@ -255,7 +261,10 @@ class DemPage extends StatelessWidget {
                       SizedBox(
                         height: 20.0,
                       ),
-                      Divider(thickness: 2, color: Colors.red,),
+                      Divider(
+                        thickness: 2,
+                        color: Colors.red,
+                      ),
                       Container(
                         margin: EdgeInsets.symmetric(horizontal: 20),
                         child: InkWell(
@@ -278,8 +287,7 @@ class DemPage extends StatelessWidget {
                                       'Coronavirus (Covid-19)\nFor information about testing, vaccinations or patient resources ',
                                   children: <TextSpan>[
                                     TextSpan(
-                                        text:
-                                            ' CLICK HERE',
+                                        text: ' CLICK HERE',
                                         style: Theme.of(context)
                                             .textTheme
                                             .headline6,
