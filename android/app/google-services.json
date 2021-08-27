@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161408423459",
+    "project_id": "schhsapp",
+    "storage_bucket": "schhsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161408423459:android:33aebf51cc2c3556d58396",
+        "android_client_info": {
+          "package_name": "com.example.schhs_my_app_v2a"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161408423459-8b0thkafltofvjb7qag7qhlisrsnqfqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyvht-tQnwliCmZqSH48ltyeYpfHltDDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161408423459-8b0thkafltofvjb7qag7qhlisrsnqfqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

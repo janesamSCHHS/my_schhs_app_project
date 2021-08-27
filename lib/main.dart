@@ -1,18 +1,19 @@
+import 'dart:io';
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
-import 'package:schhs_my_app_v2a/screens/home.dart';
-import 'package:schhs_my_app_v2a/screens/splash_screen.dart';
-import 'logic/constants.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'dart:io';
 import 'package:path_provider/path_provider.dart' as pathProvider;
+import 'package:schhs_my_app_v2a/screens/splash_screen.dart';
+
+import 'logic/constants.dart';
 import 'med.dart';
-
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  //SystemChrome.setPreferredOrientations(
+  //  [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
   Hive.init(directory.path);
   Hive.registerAdapter(EmployeeAdapter());
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = window.physicalSize.width;
     //Size screenSize = MediaQuery.of(context).size;
-   // Orientation orientation = MediaQuery.of(context).orientation;
+    // Orientation orientation = MediaQuery.of(context).orientation;
     return MaterialApp(
       theme: ThemeData(
           primaryColor: Color(0xff405061),
