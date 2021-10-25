@@ -7,14 +7,15 @@ class CommunityPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrangeAccent,
-        title: Text(
-          "Our Community",
-          style: TextStyle(fontSize: 14.0),
+        title: FittedBox(
+          fit: BoxFit.contain,
+          child: Text('Our community',
+              style: Theme.of(context).textTheme.headline3),
         ),
       ),
       body: Center(
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.end,
+            // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(
                 // height: 200.0,
@@ -35,4 +36,3 @@ class CommunityPage extends StatelessWidget {
     );
   }
 }
-

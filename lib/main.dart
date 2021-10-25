@@ -12,8 +12,6 @@ import 'med.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  //SystemChrome.setPreferredOrientations(
-  //  [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
   Hive.init(directory.path);
   Hive.registerAdapter(EmployeeAdapter());
@@ -25,14 +23,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = window.physicalSize.width;
-    //Size screenSize = MediaQuery.of(context).size;
-    // Orientation orientation = MediaQuery.of(context).orientation;
+    // Size screenSize = MediaQuery.of(context).size;
+    //  Orientation orientation = MediaQuery.of(context).orientation;
     return MaterialApp(
       theme: ThemeData(
           primaryColor: Color(0xff405061),
-          accentColor: Colors.white,
           textTheme: screenWidth < 500 ? TEXT_THEME_SMALL : TEXT_THEME_DEFAULT,
-          fontFamily: 'Meta'),
+          fontFamily: 'Meta',
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: Colors.white)),
       debugShowCheckedModeBanner: false,
       title: 'My SCHHS',
       color: Colors.white,

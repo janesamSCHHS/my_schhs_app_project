@@ -11,7 +11,11 @@ class AppointPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xFFCECE7B),
-          title: Text("Referrals/Appointments"),
+          title: FittedBox(
+            fit: BoxFit.contain,
+            child: Text('Referrals/appointments',
+                style: Theme.of(context).textTheme.headline3),
+          ),
           actions: [
             Padding(
               padding: EdgeInsets.all(8.0),

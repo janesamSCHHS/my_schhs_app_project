@@ -32,7 +32,7 @@ class DemPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xFFF44336),
         // centerTitle: true,
-        title: Text("Emergency Department"),
+        title: Text('Emergency', style: Theme.of(context).textTheme.headline3),
         actions: [
           Padding(
             padding: EdgeInsets.all(8.0),

@@ -21,6 +21,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       drawer: DrawerSlide(),
       appBar: AppBar(
+        backgroundColor: Color(0xff405061),
         title: Text(
           'My SCHHS',
           style: Theme.of(context).textTheme.headline3,

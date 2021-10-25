@@ -37,10 +37,8 @@ class MedicationsListState extends State<MedicationsListScreen> {
         appBar: NewGradientAppBar(
           gradient: LinearGradient(
               colors: [Colors.lightGreen, Colors.green, Colors.teal]),
-          title: Text(
-            "My medications",
-            style: TextStyle(fontSize: 18, letterSpacing: -1),
-          ),
+          title: Text('My medications',
+              style: Theme.of(context).textTheme.headline3),
           actions: <Widget>[
             IconButton(
               icon: Icon(

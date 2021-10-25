@@ -9,7 +9,10 @@ class ContactsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black45,
-        title: Text("Contacts"),
+        title: FittedBox(
+          fit: BoxFit.contain,
+          child: Text('Contacts', style: Theme.of(context).textTheme.headline3),
+        ),
         actions: [
           Padding(
             padding: EdgeInsets.all(8.0),

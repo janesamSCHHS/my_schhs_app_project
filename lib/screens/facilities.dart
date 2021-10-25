@@ -15,7 +15,7 @@ class FacilitiesPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xFF3ab2c2),
         // centerTitle: true,
-        title: Text("Our Facilities"),
+        title: Text('Facilities', style: Theme.of(context).textTheme.headline3),
         actions: [
           Padding(
             padding: EdgeInsets.all(8.0),

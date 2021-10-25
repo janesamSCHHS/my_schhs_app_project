@@ -10,7 +10,8 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF228375),
-        title: Text("SCHHS general information"),
+        title: Text('General information',
+            style: Theme.of(context).textTheme.headline3),
         actions: [
           Padding(
             padding: EdgeInsets.all(8.0),
