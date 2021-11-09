@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:schhs_app2021/med_list_screen.dart';
 import 'package:schhs_app2021/screens/about.dart';
 import 'package:schhs_app2021/screens/appoints.dart';
 import 'package:schhs_app2021/screens/clinics.dart';
 import 'package:schhs_app2021/screens/contact.dart';
 import 'package:schhs_app2021/screens/facilities.dart';
+import 'package:schhs_app2021/single_files/med_list_screen.dart';
 import 'package:schhs_app2021/widgets/drawer.dart';
 import 'package:url_launcher/url_launcher.dart';
 

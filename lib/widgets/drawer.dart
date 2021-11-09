@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:schhs_app2021/screens/ToDo.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:schhs_app2021/screens/about.dart';
 import 'package:schhs_app2021/screens/appoints.dart';
 import 'package:schhs_app2021/screens/clinics.dart';
@@ -10,9 +10,8 @@ import 'package:schhs_app2021/screens/contact.dart';
 import 'package:schhs_app2021/screens/emergency.dart';
 import 'package:schhs_app2021/screens/facilities.dart';
 import 'package:schhs_app2021/screens/home.dart';
-import '../med_list_screen.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../single_files/med_list_screen.dart';
 
 class DrawerSlide extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 10);
@@ -49,12 +48,13 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading: Icon(FontAwesomeIcons.info, color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.info,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("About SCHHS",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ),
 
@@ -70,13 +70,13 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading:
-                Icon(FontAwesomeIcons.hospital, color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.hospital,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("Our facilities",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ), //facilities
             Card(
@@ -91,13 +91,13 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading: Icon(FontAwesomeIcons.wheelchair,
-                  color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.wheelchair,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("Clinics and day services",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ), //appoints
             Card(
@@ -112,13 +112,13 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading:
-                Icon(FontAwesomeIcons.calendarDay, color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.calendarDay,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("Appointments and referrals",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ), //clinics
             Card(
@@ -133,12 +133,13 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading: Icon(FontAwesomeIcons.hospitalUser, color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.hospitalUser,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("Emergency department",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ), //emergency
             Card(
@@ -153,13 +154,13 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading:
-                Icon(FontAwesomeIcons.utensils, color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.utensils,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("Our community",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ),
 
@@ -171,17 +172,17 @@ class DrawerSlide extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) {
-                      return MedicationsListScreen ();
+                      return MedicationsListScreen();
                     }),
                   );
                 },
-                leading:
-                Icon(FontAwesomeIcons.tablets, color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.tablets,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("My medications",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ),
             //community
@@ -197,13 +198,13 @@ class DrawerSlide extends StatelessWidget {
                     }),
                   );
                 },
-                leading:
-                Icon(FontAwesomeIcons.phone, color: Colors.grey.shade800,size: 20,),
+                leading: Icon(
+                  FontAwesomeIcons.phone,
+                  color: Colors.grey.shade800,
+                  size: 20,
+                ),
                 title: Text("Contact us",
-                    style: Theme
-                        .of(context)
-                        .textTheme
-                        .headline4),
+                    style: Theme.of(context).textTheme.headline4),
               ),
             ),
             //contact
@@ -242,11 +243,7 @@ class DrawerSlide extends StatelessWidget {
   }
 }
 
-
-
-
-
-  /*
+/*
             buildMenuItem(
               text: 'About SCHHS',
               icon: Icons.home_outlined,
@@ -513,4 +510,3 @@ class DrawerSlide extends StatelessWidget {
       ),
     );
   }*/
-

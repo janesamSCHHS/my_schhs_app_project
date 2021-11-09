@@ -8,7 +8,7 @@ import 'package:path_provider/path_provider.dart' as pathProvider;
 import 'package:schhs_app2021/screens/splash_screen.dart';
 
 import 'logic/constants.dart';
-import 'med.dart';
+import 'single_files/med.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
