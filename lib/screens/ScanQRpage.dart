@@ -15,7 +15,8 @@ class _ScanQRHomeState extends State<ScanQRHome> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Scan directory QR code"),
+        title: Text('Scan directory QR code',
+            style: Theme.of(context).textTheme.headline3),
       ),
       body: Container(
         color: Colors.white,

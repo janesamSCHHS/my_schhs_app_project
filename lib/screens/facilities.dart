@@ -5,8 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:maps_launcher/maps_launcher.dart';
 import 'package:schhs_app2021/screens/ScanQRpage.dart';
+import 'package:schhs_app2021/services/calMore.dart';
+import 'package:schhs_app2021/services/gymMore.dart';
+import 'package:schhs_app2021/services/malenyMore.dart';
+import 'package:schhs_app2021/services/nghMore.dart';
+import 'package:schhs_app2021/services/scuhMore.dart';
 
 import './home.dart';
+import 'about.dart';
 
 class FacilitiesPage extends StatelessWidget {
   @override
@@ -28,7 +34,7 @@ class FacilitiesPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) {
-                      return OurFacilities();
+                      return AboutPage();
                     }),
                   );
                 }),
@@ -39,7 +45,7 @@ class FacilitiesPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height / 1.8,
+              height: MediaQuery.of(context).size.height / 2.2,
               margin: EdgeInsets.symmetric(vertical: 3, horizontal: 2),
               child: ListView(
                   shrinkWrap: true,
@@ -91,7 +97,7 @@ class FacilitiesPage extends StatelessWidget {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) {
-                                        return OurFacilities();
+                                        return SCUHmoreInfo();
                                       }),
                                     );
                                   },
@@ -165,7 +171,7 @@ class FacilitiesPage extends StatelessWidget {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) {
-                                        return OurFacilities();
+                                        return NGHmore();
                                       }),
                                     );
                                   },
@@ -242,7 +248,7 @@ class FacilitiesPage extends StatelessWidget {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(builder: (context) {
-                                          return OurFacilities();
+                                          return CalMore();
                                         }),
                                       );
                                     },
@@ -317,7 +323,7 @@ class FacilitiesPage extends StatelessWidget {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(builder: (context) {
-                                          return OurFacilities();
+                                          return GympieMore();
                                         }),
                                       );
                                     },
@@ -393,7 +399,7 @@ class FacilitiesPage extends StatelessWidget {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) {
-                                        return OurFacilities();
+                                        return MalenyMore();
                                       }),
                                     );
                                   },
@@ -447,7 +453,7 @@ class FacilitiesPage extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 50),
                         child: Text(
-                          'Wayfinding              QR scanner',
+                          'Wayfinding                      QR scanner',
                           style: TextStyle(
                               fontSize: 20,
                               color: Colors.white,
@@ -553,7 +559,8 @@ class _OurFacilitiesState extends State<OurFacilities> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF3ab2c2),
-        title: Text("Facility information"),
+        title: Text("Facility information",
+            style: Theme.of(context).textTheme.headline3),
         actions: [
           Padding(
             padding: EdgeInsets.all(8.0),
