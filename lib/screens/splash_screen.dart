@@ -21,7 +21,7 @@ class Splash1 extends StatelessWidget {
       imageSize: 150,
       pageRouteTransition: PageRouteTransition.SlideTransition,
       imageSrc: "assets/images/circles2.png",
-      text: "Sunshine Coast Health\n\n\nYour app",
+      text: "Sunshine Coast Health\n\n\nYour Health Service information app",
       textType: TextType.ColorizeAnimationText,
       textStyle: TextStyle(
         fontSize: 24.0,
